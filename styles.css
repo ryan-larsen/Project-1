@@ -1,0 +1,32 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: 700;
+    padding: 1%;
+    background-color: red;
+    text-align: center;
+}
+
+.flightImg {
+    padding: 25px;
+    height: auto;
+}
+
+.p1 {
+    line-height: 1.5;
+    padding: 25px;
+}
+
+.btnLabel {
+    padding: 25px;
+}
+
+.form-inline {
+    padding: 25px;
+}
