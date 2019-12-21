@@ -12,21 +12,22 @@ body {
 
 .title {
     color: #f5f5f5;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 700;
-    padding: 35px;
     text-align: center;
-
+    padding: 35px;
 }
 
 .p1 {
     line-height: 1.5;
-    margin: 0;
 }
 
 .main {
-    margin-top: 5%;
+    margin-top: 10%;
     color: #f5f5f5;
     text-align: center;
 }
 
+.row {
+    margin: 0;
+}
