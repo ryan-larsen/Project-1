@@ -60,10 +60,43 @@ $.ajax({
     .then(function(response) {
     console.log(queryURL);
     console.log(response);
+    console.log(response.name)
     console.log(response.wind.speed)
     console.log(response.main.humidity)
     console.log(response.main.temp)
-})
+    var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+    console.log(tempF)
+    $("#city").html("<h1>" + response.name + " Weather Details</h1>");
+    $("#wind").text("Wind Speed: " + response.wind.speed);
+    $("#humid").text("Humidity: " + response.main.humidity);
+    $("#temp").text("Temperature (F) " + tempF);
+    var iataName = response.name
+    iataForecast(iataName)
+})}
+function iataForecast(iataName){
+var queryURL= "https://api.openweathermap.org/data/2.5/forecast?q=" + iataName + "&appid=166a433c57516f51dfab1f7edaed8413"
+$.ajax({
+    url: queryURL,
+    method: "GET",
+    dataType: "json",
+    })
+    .then(function(response) {
+    console.log(queryURL);
+    console.log(response);
+    $("#forecast").html("<h4 class=\"mt-3\">5-Day Forecast:</h4>").append("<div class=\"row\">");
+    for (var i = 0; i < response.list.length; i++) {
+      if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
+        var col = $("<div>").addClass("col-md-2");
+        var card = $("<div>").addClass("card bg-light text-dark");
+        var body = $("<div>").addClass("card-body p-2");
+        var title = $("<h5>").addClass("card-title").text(new Date(response.list[i].dt_txt).toLocaleDateString());
+        var img = $("<img>").attr("src", "https://openweathermap.org/img/w/" + response.list[i].weather[0].icon + ".png");
+        var p1 = $("<p>").addClass("card-text").text("Temp: " + response.list[i].main.temp_max + " °F");
+        var p2 = $("<p>").addClass("card-text").text("Humidity: " + response.list[i].main.humidity + "%");
+        col.append(card.append(body.append(title, img, p1, p2)));
+        $("#forecast .row").append(col);
+      }
+    }
+  }
+)
 }})
-
-//changes
