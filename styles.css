@@ -4,29 +4,44 @@ body {
     font-size: 22px;
     font-family: 'Roboto', sans-serif;
     background-image: url(./assets/plane-background.jpg);
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 0 4000px rgba(0,0,0,.5);
     background-repeat:no-repeat;
-    background-size:cover;
-    height: 100vh;
+    background-size: cover;
+    height: 1000px;
 }
 
 .title {
     color: #f5f5f5;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 700;
-    padding: 35px;
     text-align: center;
-
+    padding: 35px;
 }
 
 .p1 {
     line-height: 1.5;
-    margin: 0;
 }
 
 .main {
-    margin-top: 5%;
     color: #f5f5f5;
     text-align: center;
 }
 
+.flight-info {
+    color: #f5f5f5;
+    text-align: center;
+    padding: 40px;
+}
+
+.forecast-title {
+    margin-right: 220px;
+    margin-bottom: 40px;
+}
+
+#forecast {
+    margin-left: 100px;
+    color: #f5f5f5;
+    justify-content: center; 
+    padding-top: 30px;
+    text-align: center;
+}
