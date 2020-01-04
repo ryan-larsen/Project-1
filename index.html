@@ -15,32 +15,41 @@
 <body>
     <div class="container">
         <div class="col-md-12">
-            <h1 class="title">Vacation Flight Tracker</h1>
+            <h1 class="title">Vacation Flight App</h1>
         </div>
     </div>
-        <div class="row">
-            <div class="col-md-12 main">
-                <p class="p1">Enter your flight number to see information about your flight, and a weekly forecast for your destination. </p>
-                <form class="formBox" action="">
-                    <label for=""></label>
-                    <input id="searchValue" type="text" class="searchBar" placeholder="Add flight number or City">
-                    <button class="btn btn-secondary " id="searchBtn"> <i class="fa fa-search"></i></button>
-                </form>
-
-            </div>
-                
-            </div>
-            
+    <div class="row">
+        <div class="col-md-12 p-5 main">
+            <p class="p1">Enter flight number to get live weather forecast for your destination.</p>
+            <form class="formBox" action="">
+                <label for=""></label>
+                <input id="searchValue" type="text" class="searchBar" placeholder="Add flight number..">
+                <button class="btn btn-secondary " id="searchBtn"> <i class="fa fa-search"></i></button>
+            </form>
         </div>
-       
+    </div>
+    <div class="container">
+        <div class="flight-info">
             <div class="row">
-                <div class="col-md-12 m-5">
-                    <div id="forecast"></div>
-                </div>
+                <div class="col-md-12" id="city"></div>
             </div>
-            
+            <div class="row">
+                <div class="col-md-12" id="wind"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" id="humid"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" id="temp"></div>
+            </div>
         </div>
-        
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" id="forecast"></div>
+    </div>
+
+
     </div>
     <script src="https://kit.fontawesome.com/390fb0bddd.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
