@@ -14,7 +14,7 @@ html, body {
     font-size: 3em;
     font-weight: 700;
     text-align: center;
-    padding: 35px;
+    padding: 0px;
 }
 
 .p1 {
@@ -33,20 +33,12 @@ html, body {
 }
 
 .forecast-title {
-    margin-right: 220px;
     margin-bottom: 40px;
 }
 
 #forecast {
-    margin-left: 110px;
     padding-bottom: 50px;
     color: #f5f5f5; 
     padding-top: 30px;
     text-align: center;
-}
-
-@media (max-width: 1000px) {
-    #forecast {
-        margin-left: 0px;
-    }
 }

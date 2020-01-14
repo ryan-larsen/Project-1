@@ -24,7 +24,7 @@ $.ajax({
   }
 function seachIata(iataValue){
 
-var queryURL ="https://aviation-edge.com/v2/public/airportDatabase?key=940b5d-e6dc01&codeIataAirport=" + iataValue
+var queryURL ="https://aviation-edge.com/v2/public/airportDatabase?key=cd3c9e-5e261d&codeIataAirport=" + iataValue
 console.log(iataValue)
 $.ajax({
   url: queryURL,
@@ -76,7 +76,7 @@ $.ajax({
   $("#forecast").html("<h4 class=\"mt-3 forecast-title\">5-Day Forecast:</h4>").append("<div class=\"row\">");
   for (var i = 0; i < response.list.length; i++) {
     if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
-      var col = $("<div>").addClass("col-md-2");
+      var col = $("<div>").addClass("col-md-2 mx-auto");
       var card = $("<div>").addClass("card bg-primary text-white");
       var body = $("<div>").addClass("card-body p-2");
       var title = $("<h5>").addClass("card-title").text(new Date(response.list[i].dt_txt).toLocaleDateString());
