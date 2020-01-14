@@ -8,7 +8,7 @@ $(document).ready(function() {
   searchFlight(searchValue);
 })
 function searchFlight(searchValue) {
-var queryURL ="https://aviation-edge.com/v2/public/flights?key=940b5d-e6dc01&flightiata=" + searchValue
+var queryURL ="https://aviation-edge.com/v2/public/flights?key=cd3c9e-5e261d&flightiata=" + searchValue
 
 $.ajax({
   url: queryURL,
